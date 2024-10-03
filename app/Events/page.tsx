@@ -98,7 +98,11 @@ export default function OurHomes() {
       </div>
 
       {/* Navigation Bar Section */}
-      <div className="flex flex-wrap justify-center items-center shadow-md bg-gray-200">
+      <div
+  className="flex flex-wrap justify-center items-center shadow-md"
+  style={{ backgroundColor: "#EEE1C6" }} // Using inline styles for custom background color
+>
+  
         {['Sangeet', 'Jaimala', 'Haldi', 'Engagement'].map((event, index) => (
           <div
             key={index}
