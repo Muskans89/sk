@@ -33,7 +33,7 @@ const Section: React.FC<SectionProps> = ({ title, imgSrc, videoLink }) => {
   );
 };
 
-import bannerImg from '/public/images/Img/03B_SHUBHAM_SUMEGHA_WEDDING-8775-NIK.jpg'; // Replace with actual banner image path
+import bannerImg from '/public/images/Img/03B_SHUBHAM_SUMEGHA_WEDDING-8740-raju.jpg'; // Replace with actual banner image path
 
 
 export default function OurHomes() {
