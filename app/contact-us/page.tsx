@@ -35,7 +35,7 @@ export default function Contact() {
           <a href="https://www.instagram.com/p/CDO1NsWp7Lt/" target="_blank" rel="noopener noreferrer">
             <div className="w-full h-[100px] sm:h-[200px]">
               <Image
-                src='/images/img/02B_AASHAV_JANVI_SANGEET-1110-JAY.jpg'
+                src='/images/Img/02B_AASHAV_JANVI_SANGEET-1110-JAY.jpg'
                 alt='Image 1'
                 width={200}
                 height={200}
@@ -49,7 +49,7 @@ export default function Contact() {
           <a href="https://www.instagram.com/p/CCGUxYGJ23S/" target="_blank" rel="noopener noreferrer">
             <div className="w-full h-[100px] sm:h-[200px]">
               <Image
-                src='/images/img/02B_SHUBHAM_SUMEGHA_SANGEET-2665-NIK.jpg'
+                src='/images/Img/02B_SHUBHAM_SUMEGHA_SANGEET-2665-NIK.jpg'
                 alt='Image 2'
                 width={200}
                 height={200}
@@ -63,7 +63,7 @@ export default function Contact() {
           <a href="https://www.instagram.com/p/CS8ifUZjKaa/" target="_blank" rel="noopener noreferrer">
             <div className="w-full h-[100px] sm:h-[200px]">
               <Image
-                src='/images/img/02_JANVI_YAZAD_SANGEET-4855-JAY.jpg'
+                src='/images/Img/02_JANVI_YAZAD_SANGEET-4855-JAY.jpg'
                 alt='Image 3'
                 width={200}
                 height={200}
@@ -77,7 +77,7 @@ export default function Contact() {
           <a href="https://www.instagram.com/p/C06YVy8J9Pj/" target="_blank" rel="noopener noreferrer">
             <div className="w-full h-[100px] sm:h-[200px]">
               <Image
-                src='/images/img/02_JANVI_YAZAD_SANGEET-3365-SAM.jpg'
+                src='/images/Img/02_JANVI_YAZAD_SANGEET-3365-SAM.jpg'
                 alt='Image 4'
                 width={200}
                 height={200}
