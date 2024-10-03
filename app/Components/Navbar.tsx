@@ -5,7 +5,8 @@ import Link from 'next/link';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false); // Track scroll to change background
+  const [isVisible, setIsVisible] = useState(true); // Track navbar visibility
+  const [lastScrollY, setLastScrollY] = useState(0); // Track last scroll position
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -13,12 +14,17 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // If scrollY is greater than a specific value (e.g., 50px), change the background of the navbar
-      if (window.scrollY > 50) {
-        setIsScrolled(true); // Change background to opaque
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY) {
+        // If scrolling down, hide the navbar
+        setIsVisible(false);
       } else {
-        setIsScrolled(false); // Keep background transparent
+        // If scrolling up, show the navbar
+        setIsVisible(true);
       }
+
+      setLastScrollY(currentScrollY);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -26,7 +32,7 @@ const Navbar = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [lastScrollY]);
 
   return (
     <>
@@ -43,12 +49,12 @@ const Navbar = () => {
           top: 0;
           left: 0;
           z-index: 1000;
-          transition: background-color 0.3s ease, top 0.3s ease;
+          transition: top 0.3s ease;
           background-color: transparent; /* Transparent by default */
         }
 
-        .navbar.scrolled {
-          background-color: rgba(0, 0, 0, 0.2); /* Opaque when scrolled */
+        .navbar.hidden {
+          top: -80px; /* Hide navbar by moving it out of view */
         }
 
         .logo {
@@ -173,7 +179,7 @@ const Navbar = () => {
         }
       `}</style>
 
-      <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+      <nav className={`navbar ${!isVisible ? 'hidden' : ''}`}>
         <div className="logo">
           SUMIT KHETAN
           <div className="logo-subtext">ENTERTAINMENT & CO</div>

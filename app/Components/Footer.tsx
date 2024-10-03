@@ -195,7 +195,7 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="/events" className="footer-link">
+                <a href="/Events" className="footer-link">
                   Events
                 </a>
               </li>
