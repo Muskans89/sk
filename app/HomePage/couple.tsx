@@ -13,7 +13,7 @@ const TrustedByCouples = () => {
                 <div className="space-y-1">
                     <div className="relative w-full h-[400px]">
                         <Image
-                            src="/images/img/03B_AASHAV_JANVI_WEDDING-5919-JAY.jpg" // Replace with actual image path
+                            src="/images/Img/03B_AASHAV_JANVI_WEDDING-5919-JAY.jpg" // Replace with actual image path
                             alt="Janvi & Aashav"
                             layout="fill"
                             objectFit="cover"
@@ -28,7 +28,7 @@ const TrustedByCouples = () => {
                 <div className="space-y-1">
                     <div className="relative w-full h-[400px]">
                         <Image
-                            src="/images/img/02_JANVI_YAZAD_SANGEET-3872-SAM.jpg" // Replace with actual image path
+                            src="/images/Img/02_JANVI_YAZAD_SANGEET-3872-SAM.jpg" // Replace with actual image path
                             alt="Janvi & Yazad"
                             layout="fill"
                             objectFit="cover"
@@ -43,7 +43,7 @@ const TrustedByCouples = () => {
                 <div className="space-y-1">
                     <div className="relative w-full h-[400px]">
                         <Image
-                            src="/images/img/lakshaamika.png" // Replace with actual image path
+                            src="/images/Img/lakshaamika.png" // Replace with actual image path
                             alt="Anamika & Laksh"
                             layout="fill"
                             objectFit="cover"
@@ -58,7 +58,7 @@ const TrustedByCouples = () => {
                 <div className="space-y-1">
                     <div className="relative w-full h-[400px]">
                         <Image
-                            src="/images/img/03B_SHUBHAM_SUMEGHA_WEDDING-8740-raju.jpg" // Replace with actual image path
+                            src="/images/Img/03B_SHUBHAM_SUMEGHA_WEDDING-8740-raju.jpg" // Replace with actual image path
                             alt="Shubham & Sumegha"
                             layout="fill"
                             objectFit="cover"
