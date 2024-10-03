@@ -202,7 +202,7 @@ export default function OurHomes() {
             {activeSection === 'Haldi' && (
               <><Section
               title="Shubham & Sumegha"
-              imgSrc="/images/Img/03A_SHUBHAM_SUMEGHA_HALDI-1716-raju.jpg"
+              imgSrc="/images/Img/ss.jpg"
               location=" Raffels Udaipur"
               videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
             />
