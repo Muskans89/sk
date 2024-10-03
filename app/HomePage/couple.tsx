@@ -1,10 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import janviAashavImage from "/public/images/img/03B_AASHAV_JANVI_WEDDING-5919-JAY.jpg";
-import janviYazadImage from "/public/images/img/02_JANVI_YAZAD_SANGEET-3872-SAM.jpg";
-import anamikaLakshImage from "/public/images/img/lakshaamika.png";
-import shubhamSumeghaImage from "/public/images/img/03B_SHUBHAM_SUMEGHA_WEDDING-8740-raju.jpg";
 
 const TrustedByCouples = () => {
     return (
@@ -17,10 +13,11 @@ const TrustedByCouples = () => {
                 <div className="space-y-1">
                     <div className="relative w-full h-[400px]">
                         <Image
-                            src={janviAashavImage}
+                            src="/images/img/03B_AASHAV_JANVI_WEDDING-5919-JAY.jpg" // Replace with actual image path
                             alt="Janvi & Aashav"
                             layout="fill"
                             objectFit="cover"
+                            
                         />
                     </div>
                     <p className="text-black text-lg futura-font">Janvi & Aashav</p>
@@ -31,10 +28,11 @@ const TrustedByCouples = () => {
                 <div className="space-y-1">
                     <div className="relative w-full h-[400px]">
                         <Image
-                            src={janviYazadImage}
+                            src="/images/img/02_JANVI_YAZAD_SANGEET-3872-SAM.jpg" // Replace with actual image path
                             alt="Janvi & Yazad"
                             layout="fill"
                             objectFit="cover"
+                          
                         />
                     </div>
                     <p className="text-black text-lg futura-font">Janvi & Yazad</p>
@@ -45,10 +43,11 @@ const TrustedByCouples = () => {
                 <div className="space-y-1">
                     <div className="relative w-full h-[400px]">
                         <Image
-                            src={anamikaLakshImage}
+                            src="/images/img/lakshaamika.png" // Replace with actual image path
                             alt="Anamika & Laksh"
                             layout="fill"
                             objectFit="cover"
+                           
                         />
                     </div>
                     <p className="text-black text-lg futura-font">Anamika & Laksh</p>
@@ -59,10 +58,11 @@ const TrustedByCouples = () => {
                 <div className="space-y-1">
                     <div className="relative w-full h-[400px]">
                         <Image
-                            src={shubhamSumeghaImage}
+                            src="/images/img/03B_SHUBHAM_SUMEGHA_WEDDING-8740-raju.jpg" // Replace with actual image path
                             alt="Shubham & Sumegha"
                             layout="fill"
                             objectFit="cover"
+                            
                         />
                     </div>
                     <p className="text-black text-lg futura-font">Shubham & Sumegha</p>
