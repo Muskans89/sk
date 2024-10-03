@@ -63,7 +63,7 @@ export default function Contact() {
           <a href="https://www.instagram.com/p/CS8ifUZjKaa/" target="_blank" rel="noopener noreferrer">
             <div className="w-full h-[100px] sm:h-[200px]">
               <Image
-                src='/images/Img/02_JANVI_YAZAD_SANGEET-4855-JAY.jpg'
+                src='/images/Img/02B_SHUBHAM_SUMEGHA_SANGEET-2622-raju.jpg'
                 alt='Image 3'
                 width={200}
                 height={200}
