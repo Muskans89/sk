@@ -125,7 +125,7 @@ export default function OurHomes() {
               <>
                 <Section
                   title="Shubham & Sumegha"
-                  imgSrc="/images/img/02B_SHUBHAM_SUMEGHA_SANGEET-2950-JAY.jpg"
+                  imgSrc="/images/Img/02B_SHUBHAM_SUMEGHA_SANGEET-2950-JAY.jpg"
                   location="Raffels Udaipur"
                   videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
                 />
@@ -137,7 +137,7 @@ export default function OurHomes() {
                 />
                 <Section
                   title="Yazad & Janvi"
-                  imgSrc="/images/img/02_JANVI_YAZAD_SANGEET-3872-SAM.jpg"
+                  imgSrc="/images/Img/02_JANVI_YAZAD_SANGEET-3872-SAM.jpg"
                   location="Ramayan Farms - Surat"
                   videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
                 />
@@ -149,7 +149,7 @@ export default function OurHomes() {
                 />
                 <Section
                   title="Aashav & Janvi"
-                  imgSrc="/images/img/PRA06649.jpg"
+                  imgSrc="/images/Img/PRA06649.jpg"
                   location="Queens Lawn - Borivali"
                   videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
                 />
@@ -160,7 +160,7 @@ export default function OurHomes() {
             {activeSection === 'Jaimala' && (
               <><Section
               title="Shubham & Sumegha"
-              imgSrc="/images/img/03B_SHUBHAM_SUMEGHA_WEDDING-8740-raju.jpg"
+              imgSrc="/images/Img/03B_SHUBHAM_SUMEGHA_WEDDING-8740-raju.jpg"
               location=" Raffels Udaipur"
               videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
             />
@@ -173,7 +173,7 @@ export default function OurHomes() {
             />
             <Section
               title="Yazad & Janvi"
-              imgSrc="/images/img/SBP50903.jpg"
+              imgSrc="/images/Img/SBP50903.jpg"
               location="Ramayan Farms - Surat 
 "
               videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
@@ -187,7 +187,7 @@ export default function OurHomes() {
             />
             <Section
               title="Aashav & Janvi"
-              imgSrc="/images/img/03B_AASHAV_JANVI_WEDDING-5919-JAY.jpg"
+              imgSrc="/images/Img/03B_AASHAV_JANVI_WEDDING-5919-JAY.jpg"
               location="Queens Lawn - Borivali 
 "
               videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
@@ -198,7 +198,7 @@ export default function OurHomes() {
             {activeSection === 'Haldi' && (
               <><Section
               title="Shubham & Sumegha"
-              imgSrc="/images/img/03A_SHUBHAM_SUMEGHA_HALDI-1892-raju.jpg"
+              imgSrc="/images/Img/03A_SHUBHAM_SUMEGHA_HALDI-1892-raju.jpg"
               location=" Raffels Udaipur"
               videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
             />
@@ -211,7 +211,7 @@ export default function OurHomes() {
             />
             <Section
               title="Yazad & Janvi"
-              imgSrc="/images/img/06_JANVI_YAZAD_HALDI-4310-PRABHU1.jpg"
+              imgSrc="/images/Img/06_JANVI_YAZAD_HALDI-4310-PRABHU1.jpg"
               location="Ramayan Farms - Surat 
 "
               videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
@@ -225,7 +225,7 @@ export default function OurHomes() {
             />
             <Section
               title="Aashav & Janvi"
-              imgSrc="/images/img/02A_AASHAV_JANVI_HALDI_MEHENDI-6071-JAY.jpg"
+              imgSrc="/images/Img/02A_AASHAV_JANVI_HALDI_MEHENDI-6071-JAY.jpg"
               location="Queens Lawn - Borivali 
 "
               videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
@@ -236,7 +236,7 @@ export default function OurHomes() {
             {activeSection === 'Engagement' && (
               <><Section
               title="Shubham & Sumegha"
-              imgSrc="/images/img/DSC07175.jpg"
+              imgSrc="/images/Img/DSC07175.jpg"
               location=" Raffels Udaipur"
               videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
             />
@@ -249,7 +249,7 @@ export default function OurHomes() {
             />
             <Section
               title="Yazad & Janvi"
-              imgSrc="/images/img/JAY00070.jpg"
+              imgSrc="/images/Img/JAY00070.jpg"
               location="Ramayan Farms - Surat 
 "
               videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
@@ -263,7 +263,7 @@ export default function OurHomes() {
             />
             <Section
               title="Aashav & Janvi"
-              imgSrc="/images/img/RNF_AASHAV_JANVI_ENGAGEMENT-5201-JAY.jpg"
+              imgSrc="/images/Img/RNF_AASHAV_JANVI_ENGAGEMENT-5201-JAY.jpg"
               location="Queens Lawn - Borivali 
 "
               videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
