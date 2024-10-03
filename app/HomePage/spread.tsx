@@ -7,8 +7,8 @@ import "slick-carousel/slick/slick-theme.css";
 
 // Sample banner data
 const banners = [
-  { src: '/images/Img/03B_AASHAV_JANVI_WEDDING-5866-SAM.jpg', alt: 'Pranay & Mishika' },
-  { src: '/images/Img/03B_SHUBHAM_SUMEGHA_WEDDING-8775-NIK.jpg', alt: 'Janvi & Jayad' },
+  { src: '/images/Img/JAY07097.jpg', alt: 'Pranay & Mishika' },
+  { src: '/images/Img/RNF_AASHAV_JANVI_ENGAGEMENT-5201-JAY.jpg', alt: 'Janvi & Jayad' },
   { src: '/images/Img/02_JANVI_YAZAD_SANGEET-3870-SAM.jpg', alt: 'Disha & Rahul' },
   { src: '/images/Img/DSC06813.jpg', alt: 'Pranay & Mishika' },
 ];
