@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import janviAashavImage from "/images/img/03B_AASHAV_JANVI_WEDDING-5919-JAY.jpg";
-import janviYazadImage from "/images/img/02_JANVI_YAZAD_SANGEET-3872-SAM.jpg";
-import anamikaLakshImage from "/images/img/lakshaamika.png";
-import shubhamSumeghaImage from "/images/img/03B_SHUBHAM_SUMEGHA_WEDDING-8740-raju.jpg";
+import janviAashavImage from "/public/images/img/03B_AASHAV_JANVI_WEDDING-5919-JAY.jpg";
+import janviYazadImage from "/public/images/img/02_JANVI_YAZAD_SANGEET-3872-SAM.jpg";
+import anamikaLakshImage from "/public/images/img/lakshaamika.png";
+import shubhamSumeghaImage from "/public/images/img/03B_SHUBHAM_SUMEGHA_WEDDING-8740-raju.jpg";
 
 const TrustedByCouples = () => {
     return (
