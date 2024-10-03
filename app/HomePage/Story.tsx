@@ -40,22 +40,6 @@ const Story: React.FC = () => {
   return (
     <section className="bg-white text-black pt-16 pb-1 font-futura">
       <style jsx>{`
-        @font-face {
-          font-family: 'Futura';
-          src: url('/fonts/futura/Futura-Regular.woff2') format('woff2'),
-               url('/fonts/futura/Futura-Regular.woff') format('woff');
-          font-weight: 400;
-          font-style: normal;
-        }
-
-        @font-face {
-          font-family: 'Futura';
-          src: url('/fonts/futura/Futura-Bold.woff2') format('woff2'),
-               url('/fonts/futura/Futura-Bold.woff') format('woff');
-          font-weight: 700;
-          font-style: normal;
-        }
-
         .font-futura {
           font-family: 'Futura', sans-serif;
         }
@@ -159,7 +143,7 @@ const Story: React.FC = () => {
       </div>
       <div className="frame mx-auto">
         <Slider {...settings}>
-          {/* Add images in the slider */}
+          {/* Since the images array is empty, nothing will be rendered in the slider */}
         </Slider>
       </div>
     </section>
