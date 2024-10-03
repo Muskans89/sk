@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import bg from "/public/images/Img/c.jpg";
+import bg from "/public/images/Img/02B_SHUBHAM_SUMEGHA_SANGEET-2665-NIK.jpg";
 import FromTheDesk from "../HomePage/Sumit";
 
 export default function About() {
