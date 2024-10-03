@@ -38,11 +38,25 @@ const Story: React.FC = () => {
   };
 
   return (
-    <section className="bg-white text-black pt-16 pb-1 futura-font">
+    <section className="bg-white text-black pt-16 pb-1 font-futura">
       <style jsx>{`
-        @import url('https://fonts.googleapis.com/css2?family=Futura:wght@400;700&display=swap');
+        @font-face {
+          font-family: 'Futura';
+          src: url('/fonts/futura/Futura-Regular.woff2') format('woff2'),
+               url('/fonts/futura/Futura-Regular.woff') format('woff');
+          font-weight: 400;
+          font-style: normal;
+        }
 
-        .futura-font {
+        @font-face {
+          font-family: 'Futura';
+          src: url('/fonts/futura/Futura-Bold.woff2') format('woff2'),
+               url('/fonts/futura/Futura-Bold.woff') format('woff');
+          font-weight: 700;
+          font-style: normal;
+        }
+
+        .font-futura {
           font-family: 'Futura', sans-serif;
         }
 
@@ -74,13 +88,13 @@ const Story: React.FC = () => {
 
         .slick-list {
           padding: 0;
-          margin-bottom: 0px; /* Removed margin from the slick list */
-          border: none; /* Ensure no borders are applied */
+          margin-bottom: 0px;
+          border: none;
         }
 
         h2 {
           font-size: 26px;
-          margin-bottom: 20px; /* Increased margin for more space after heading */
+          margin-bottom: 20px;
           color: black;
           font-family: 'Futura', sans-serif;
         }
@@ -112,7 +126,7 @@ const Story: React.FC = () => {
 
           h2 {
             font-size: 22px;
-            margin-bottom: 20px; /* Increased space on mobile as well */
+            margin-bottom: 20px;
           }
 
           p {
@@ -139,13 +153,13 @@ const Story: React.FC = () => {
           }
         }
       `}</style>
-      <div className="text-container  mx-auto text-center leading-8">
+      <div className="text-container mx-auto text-center leading-8">
         <h2>An Ode to Love</h2>
         <p>{details[activeSection].text}</p>
       </div>
       <div className="frame mx-auto">
         <Slider {...settings}>
-          {/* Since the images array is empty, nothing will be rendered in the slider */}
+          {/* Add images in the slider */}
         </Slider>
       </div>
     </section>
