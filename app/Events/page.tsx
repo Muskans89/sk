@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion'; // Importing Framer Motion for animations
 
 type SectionProps = {
   title: string;
@@ -99,32 +100,48 @@ export default function OurHomes() {
 
       {/* Navigation Bar Section */}
       <div
-  className="flex flex-wrap justify-center items-center shadow-md"
-  style={{ backgroundColor: "#EEE1C6" }} // Using inline styles for custom background color
->
-  
+        className="flex flex-wrap justify-center items-center shadow-md"
+        style={{ backgroundColor: "#EEE1C6" }} // Using inline styles for custom background color
+      >
         {['Sangeet', 'Jaimala', 'Haldi', 'Engagement'].map((event, index) => (
-          <div
+          <motion.div
             key={index}
             className={`flex-1 flex justify-between items-center px-4 sm:px-8 py-2 sm:py-4 cursor-pointer 
                         transition duration-300 text-center
-                        ${activeSection === event ? 'bg-[#your-beige-color-code] text-black' : 'bg-white text-gray-700'}`}
+                        ${activeSection === event ? 'bg-[#EEE1C6] text-black' : 'bg-white text-gray-700'}`}
+            whileHover={{ scale: 1.05 }} // Added hover effect
             onClick={() => toggleSection(event)}
           >
             <span className="text-md sm:text-lg font-medium">{event}</span>
             <span className="text-gray-600 hidden sm:block">
               {activeSection === event ? '▲' : '▼'}
             </span>
-          </div>
+          </motion.div>
         ))}
       </div>
 
       {/* Event Sections */}
       {activeSection && (
-        <div className="py-8 sm:py-16 px-4 sm:px-8 bg-[#your-beige-color-code]">
-          <h2 className="text-2xl sm:text-3xl text-center mb-8 sm:mb-12 text-black futura-font">{activeSection}</h2>
-          <div className="flex flex-wrap -mx-4 sm:-mx-6">
-            {/* Event Content for Sangeet */}
+        <div className="py-8 sm:py-16 px-4 sm:px-8 bg-[#EEE1C6]">
+          <motion.h2
+            className="text-2xl sm:text-3xl text-center mb-8 sm:mb-12 text-black futura-font"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            {activeSection}
+          </motion.h2>
+          <motion.div
+            className="flex flex-wrap -mx-4 sm:-mx-6"
+            initial="hidden"
+            animate="visible"
+            variants={{
+              hidden: { opacity: 0, y: 50 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            transition={{ duration: 0.6 }}
+          >
+            {/* Content for Sangeet */}
             {activeSection === 'Sangeet' && (
               <>
                 <Section
@@ -160,122 +177,114 @@ export default function OurHomes() {
               </>
             )}
 
-            {/* Similar Structure for other events */}
+            {/* Content for Jaimala */}
             {activeSection === 'Jaimala' && (
-              <><Section
-              title="Shubham & Sumegha"
-              imgSrc="/images/Img/03B_SHUBHAM_SUMEGHA_WEDDING-8740-raju.jpg"
-              location=" Raffels Udaipur"
-              videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
-            />
-            <Section
-              title="Laksh & Anamika"
-              imgSrc="/images/laksh.jpg"
-              location="JW Marriott- Banglore 
-"
-              videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
-            />
-            <Section
-              title="Yazad & Janvi"
-              imgSrc="/images/Img/SBP50903.jpg"
-              location="Ramayan Farms - Surat 
-"
-              videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
-            />
-            <Section
-              title="Utsav & Maithli"
-              imgSrc="/images/4.png"
-              location=" Jio World Mumbai 
-"
-              videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
-            />
-            <Section
-              title="Aashav & Janvi"
-              imgSrc="/images/Img/03B_AASHAV_JANVI_WEDDING-5919-JAY.jpg"
-              location="Queens Lawn - Borivali 
-"
-              videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
-            />
-                {/* Add the Section components for Jaimala here */}
+              <>
+                <Section
+                  title="Shubham & Sumegha"
+                  imgSrc="/images/Img/03B_SHUBHAM_SUMEGHA_WEDDING-8740-raju.jpg"
+                  location=" Raffels Udaipur"
+                  videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
+                />
+                <Section
+                  title="Laksh & Anamika"
+                  imgSrc="/images/laksh.jpg"
+                  location="JW Marriott- Banglore"
+                  videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
+                />
+                <Section
+                  title="Yazad & Janvi"
+                  imgSrc="/images/Img/SBP50903.jpg"
+                  location="Ramayan Farms - Surat"
+                  videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
+                />
+                <Section
+                  title="Utsav & Maithli"
+                  imgSrc="/images/4.png"
+                  location=" Jio World Mumbai"
+                  videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
+                />
+                <Section
+                  title="Aashav & Janvi"
+                  imgSrc="/images/Img/03B_AASHAV_JANVI_WEDDING-5919-JAY.jpg"
+                  location="Queens Lawn - Borivali"
+                  videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
+                />
               </>
             )}
+
+            {/* Content for Haldi */}
             {activeSection === 'Haldi' && (
-              <><Section
-              title="Shubham & Sumegha"
-              imgSrc="/images/Img/ss.jpg"
-              location=" Raffels Udaipur"
-              videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
-            />
-            <Section
-              title="Laksh & Anamika"
-              imgSrc="/images/laksh.jpg"
-              location="JW Marriott- Banglore 
-"
-              videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
-            />
-            <Section
-              title="Yazad & Janvi"
-              imgSrc="/images/Img/06_JANVI_YAZAD_HALDI-4310-PRABHU1.jpg"
-              location="Ramayan Farms - Surat 
-"
-              videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
-            />
-            <Section
-              title="Utsav & Maithli"
-              imgSrc="/images/4.png"
-              location=" Jio World Mumbai 
-"
-              videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
-            />
-            <Section
-              title="Aashav & Janvi"
-              imgSrc="/images/Img/02A_AASHAV_JANVI_HALDI_MEHENDI-6071-JAY.jpg"
-              location="Queens Lawn - Borivali 
-"
-              videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
-            />
-                {/* Add the Section components for Haldi here */}
+              <>
+                <Section
+                  title="Shubham & Sumegha"
+                  imgSrc="/images/Img/03A_SHUBHAM_SUMEGHA_HALDI-1716-raju.jpg"
+                  location=" Raffels Udaipur"
+                  videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
+                />
+                <Section
+                  title="Laksh & Anamika"
+                  imgSrc="/images/laksh.jpg"
+                  location="JW Marriott- Banglore"
+                  videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
+                />
+                <Section
+                  title="Yazad & Janvi"
+                  imgSrc="/images/Img/06_JANVI_YAZAD_HALDI-4310-PRABHU1.jpg"
+                  location="Ramayan Farms - Surat"
+                  videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
+                />
+                <Section
+                  title="Utsav & Maithli"
+                  imgSrc="/images/4.png"
+                  location=" Jio World Mumbai"
+                  videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
+                />
+                <Section
+                  title="Aashav & Janvi"
+                  imgSrc="/images/Img/02A_AASHAV_JANVI_HALDI_MEHENDI-6071-JAY.jpg"
+                  location="Queens Lawn - Borivali"
+                  videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
+                />
               </>
             )}
+
+            {/* Content for Engagement */}
             {activeSection === 'Engagement' && (
-              <><Section
-              title="Shubham & Sumegha"
-              imgSrc="/images/Img/DSC07175.jpg"
-              location=" Raffels Udaipur"
-              videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
-            />
-            <Section
-              title="Laksh & Anamika"
-              imgSrc="/images/laksh.jpg"
-              location="JW Marriott- Banglore 
-"
-              videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
-            />
-            <Section
-              title="Yazad & Janvi"
-              imgSrc="/images/Img/JAY00070.jpg"
-              location="Ramayan Farms - Surat 
-"
-              videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
-            />
-            <Section
-              title="Utsav & Maithli"
-              imgSrc="/images/4.png"
-              location=" Jio World Mumbai 
-"
-              videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
-            />
-            <Section
-              title="Aashav & Janvi"
-              imgSrc="/images/Img/RNF_AASHAV_JANVI_ENGAGEMENT-5201-JAY.jpg"
-              location="Queens Lawn - Borivali 
-"
-              videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
-            />
-                {/* Add the Section components for Engagement here */}
+              <>
+                <Section
+                  title="Shubham & Sumegha"
+                  imgSrc="/images/Img/DSC07175.jpg"
+                  location=" Raffels Udaipur"
+                  videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
+                />
+                <Section
+                  title="Laksh & Anamika"
+                  imgSrc="/images/laksh.jpg"
+                  location="JW Marriott- Banglore"
+                  videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
+                />
+                <Section
+                  title="Yazad & Janvi"
+                  imgSrc="/images/Img/JAY00070.jpg"
+                  location="Ramayan Farms - Surat"
+                  videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
+                />
+                <Section
+                  title="Utsav & Maithli"
+                  imgSrc="/images/4.png"
+                  location=" Jio World Mumbai"
+                  videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
+                />
+                <Section
+                  title="Aashav & Janvi"
+                  imgSrc="/images/Img/RNF_AASHAV_JANVI_ENGAGEMENT-5201-JAY.jpg"
+                  location="Queens Lawn - Borivali"
+                  videoLink="https://www.youtube.com/embed/JRT0zSUNNNU?autoplay=1&loop=1&mute=1&playlist=JRT0zSUNNNU&controls=0&rel=0"
+                />
               </>
             )}
-          </div>
+          </motion.div>
         </div>
       )}
     </main>
