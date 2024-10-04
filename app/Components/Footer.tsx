@@ -130,6 +130,11 @@ const Footer: React.FC = () => {
           .social-icons {
             justify-content: center;
           }
+
+          /* Smaller logo text for mobile screens */
+          .logo-text {
+            font-size: 18px; /* Reduced font size for mobile */
+          }
         }
       `}</style>
 
