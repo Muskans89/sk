@@ -103,9 +103,9 @@ export default function About() {
   </h1>
 
   {/* Testimonials Grid */}
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+  <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8"> {/* Adjusted grid for mobile view */}
     {[
-       { name: "Gauhar Khan ", img: "guhrah.jpg", text: "Thank you, Sumit Khetan, for the wonderful experience of being choreographed by you. Wishing you all the best for your incredible shows. God bless!" },
+      { name: "Gauhar Khan ", img: "guhrah.jpg", text: "Thank you, Sumit Khetan, for the wonderful experience of being choreographed by you. Wishing you all the best for your incredible shows. God bless!" },
       { name: "Rithvik Dhanjani", img: "ritvik.jpeg", text: "Sumit did an excellent job. If one enjoys dancing, it’s usually due to the choreographer." },
       { name: "Disha Parmar", img: "disha.jpg", text: "He made everything simple for us, adjusting steps wherever needed." },
       { name: "Nakul Mehta", img: "nakul.png", text: "Sumit is one of the ace choreographers in the country." },
@@ -136,6 +136,8 @@ export default function About() {
     ))}
   </div>
 </div>
+
+   
 
     </main>
   );
