@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { motion } from 'framer-motion'; // Import Framer Motion for animations
 import Logo1 from '../../public/images/logo1.png'; 
 import Logo2 from '../../public/images/logo2.png';
 import Logo3 from '../../public/images/logo3.png';
@@ -83,13 +84,23 @@ const Home: React.FC = () => {
           }
         }
       `}</style>
+
       <h2 className="clients-heading font-futura">Clients</h2>
+
       {isClient && (
         <div className="grid-container px-10 sm:px-14">
           {logos.map((logo, index) => (
-            <div key={index} className="logo-container">
+            <motion.div
+              key={index}
+              className="logo-container"
+              initial={{ opacity: 0, scale: 0.8 }} // Start small and invisible
+              animate={{ opacity: 1, scale: 1 }} // Animate to full size and visible
+              transition={{ duration: 0.5, delay: index * 0.1 }} // Stagger the animations
+              whileHover={{ scale: 1.1 }} // Slightly enlarge on hover
+              whileTap={{ scale: 0.95 }} // Slightly shrink on click
+            >
               <Image src={logo.src} alt={logo.alt} className="logo-image" />
-            </div>
+            </motion.div>
           ))}
         </div>
       )}
