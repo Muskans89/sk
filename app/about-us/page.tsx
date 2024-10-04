@@ -1,5 +1,5 @@
 "use client";
-
+import { FaCheckCircle } from 'react-icons/fa'; // Example icon
 import Image from "next/image";
 import bg from "/public/images/Img/02B_SHUBHAM_SUMEGHA_SANGEET-2665-NIK.jpg";
 import FromTheDesk from "../HomePage/Sumit";
@@ -78,21 +78,29 @@ export default function About() {
     </div>
 
     {/* Right Section: Offers Grid */}
-    <div className="w-full md:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-8">
-      {[
-        { title: "Wedding Choreography", description: "Crafting unforgettable dance performances for your special day." },
-        { title: "Corporate Event Choreography", description: "Energizing your corporate events with performances that inspire." },
-        { title: "Brand Launches", description: "Creating show-stopping performances that make your brand stand out." },
-        { title: "Themed Event Choreography", description: "Bringing your event theme to life with perfectly tailored choreography." },
-        { title: "Pre-wedding Celebrations", description: "Choreographing dance numbers that add joy and excitement to sangeet and mehendi." },
-        { title: "Proposal and Engagement", description: "Helping you make the perfect proposal with a romantic, well-coordinated performance." }
-      ].map((offer, index) => (
-        <div key={index} className="flex flex-col space-y-2">
-          <h3 className="text-2xl text-black">{offer.title}</h3> {/* Removed font-semibold */}
-          <p className="text-gray-600 leading-relaxed">{offer.description}</p>
-        </div>
-      ))}
+    
+
+<div className="w-full md:w-2/3 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8">
+  {[
+    { title: "Wedding Choreography", description: "Crafting unforgettable dance performances for your special day." },
+    { title: "Corporate Event Choreography", description: "Energizing your corporate events with performances that inspire." },
+    { title: "Brand Launches", description: "Creating show-stopping performances that make your brand stand out." },
+    { title: "Themed Event Choreography", description: "Bringing your event theme to life with perfectly tailored choreography." },
+    { title: "Pre-wedding Celebrations", description: "Choreographing dance numbers that add joy and excitement to sangeet and mehendi." },
+    { title: "Proposal and Engagement", description: "Helping you make the perfect proposal with a romantic, well-coordinated performance." }
+  ].map((offer, index) => (
+    <div key={index} className="flex flex-row space-x-3 items-start">
+      {/* Pointer Icon */}
+      <FaCheckCircle className="text-black text-xl mt-1" /> {/* You can adjust the size of the icon */}
+      
+      {/* Text Content */}
+      <div className="flex flex-col space-y-2">
+        <h3 className="text-2xl text-black">{offer.title}</h3>
+        <p className="text-gray-600 leading-relaxed">{offer.description}</p>
+      </div>
     </div>
+  ))}
+</div>
   </div>
 </div>
 
